@@ -1,32 +1,32 @@
 // _____________________________ Youtube API _____________________________________________________________  
-var iframeItem;
-var tag = document.createElement('script');
-var firstScriptTag = document.getElementsByTagName('script')[0];
+// var iframeItem;
+// var tag = document.createElement('script');
+// var firstScriptTag = document.getElementsByTagName('script')[0];
 
-var players = [];
-var iframes = $(".item").find(".iframe");
+// var players = [];
+// var iframes = $(".item").find(".iframe");
 
-tag.src = "https://www.youtube.com/iframe_api";
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// tag.src = "https://www.youtube.com/iframe_api";
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-function onYouTubeIframeAPIReady() {
-    for (var i = 0; i < iframes.length; i++) {
-        iframeItem = iframes[i];
+// function onYouTubeIframeAPIReady() {
+//     for (var i = 0; i < iframes.length; i++) {
+//         iframeItem = iframes[i];
 
-        players[i] = new YT.Player(iframeItem, {
-            suggestedQuality: 'hd720',
-            events: {
-                'onReady': onPlayerReady,
-            }
-        });
-    }
-}
+//         players[i] = new YT.Player(iframeItem, {
+//             suggestedQuality: 'hd720',
+//             events: {
+//                 'onReady': onPlayerReady,
+//             }
+//         });
+//     }
+// }
 
-function onPlayerReady(event) {
-    event.target.pauseVideo();
-    // event.target.clearVideo();
-    // event.target.stopVideo();
-}
+// function onPlayerReady(event) {
+//     event.target.pauseVideo();
+//     // event.target.clearVideo();
+//     // event.target.stopVideo();
+// }
 
 var sliderOwlImg = $('.a-slider-carousel-img');
 

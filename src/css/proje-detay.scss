@@ -1,0 +1,356 @@
+// @import "settings";
+
+.anlas {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../dest/images/anlasbg.png");
+    background-size:100% 20%;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center 90px;
+    @include respond(medium) {
+        background-size:100% 15%;
+    }
+  
+    .center {
+        @include respond(medium) {
+            width: calc(100% - 2rem);
+        }
+    }
+    .anlaslog {
+        padding-top: 13rem;
+        width: 100%;
+        img {
+            @include respond(medium) {
+                width: 40%;
+            }
+        }
+        .section-topic {
+            padding-top: 1rem;
+            font-size: 30px;
+            @include respond(medium) {
+                padding-top: 2rem;
+                font-size: 18px;
+            }
+        }
+    }
+    .anlaswrap {
+        padding-top: 10rem;
+        width: 100%;
+        @include respond(medium) {
+            padding-top: 5rem;
+        }
+        img {
+            width: 100%;
+            @include respond(medium){
+                width:105%;
+            }
+        }
+    }
+    .anlaswrap:nth-child(1) {
+        @include respond(medium) {
+            margin-left:-3% ;
+            img{
+                width:105%;
+            }
+        }
+    }
+    .anlaswrap:nth-child(3) {
+        padding-top: 2rem;
+        padding-left: 3rem;
+        @include respond(medium) {
+            padding-left: 0rem;
+            img{
+                width:105%;
+            }
+        }
+    }
+    .anlaswrap:nth-child(5) {
+        
+        padding-top: 2rem;
+        @include respond(medium) {
+            margin-left:-5.3% ;
+            img{
+                width:110%;
+            }
+        }
+        
+    }
+    .anlaspar {
+        padding: 3rem;
+        @include respond(medium) {
+            padding: 1rem 0;
+        }
+        h3 {
+            font-family: $font;
+            font-size: 24px;
+            font-weight: 600;
+            @include respond(medium) {
+                font-size: 16px;
+            }
+        }
+        span {
+            font-weight: 600;
+        }
+        p {
+            padding-top: 1rem;
+            font-family: $font;
+            font-size: 20px;
+            @include respond(medium) {
+                font-size: 14px;
+            }
+        }
+    }
+    .centers {
+        width: calc(100% - 10rem);
+        margin:20px auto ;
+        @include respond(medium) {
+            margin: auto ;
+            width: 100%;
+        }
+
+    }
+    .anlaslink {
+        padding-top: 2rem;
+        margin: auto;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: $font;
+            font-size: 24px;
+            @include respond(medium) {
+                font-size: 16px;
+            }
+            i {
+                color: orange;
+                font-size: 20px;
+            }
+        }
+    }
+    .but {
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .once {
+            font-family: $font;
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: 200;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                &:before {
+                    content: "\f053";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                    font-size: 30px;
+                    margin-right: 1rem;
+                    @include respond(medium) {
+                        font-size: 20px;
+                    }
+                }
+                @include respond(medium) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .sonra {
+            font-family: $font;
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: 200;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                &:after {
+                    content: "\f054";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                    font-size: 30px;
+                    margin-left: 1rem;
+                    @include respond(medium) {
+                        font-size: 20px;
+                    }
+                }
+                @include respond(medium) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// .cagir {
+//     position: relative;
+//     width: 100%;
+//     margin-top: 3rem;
+//     background-color: white;
+//     .col4 {
+//         img {
+//             margin-left: -30%;
+//             width: 140%;
+//         }
+//     }
+//     .cagir-content {
+//         font-family: $font;
+//         font-weight: 400;
+//         font-size: 18px;
+//         color: #000;        
+//         h1 {
+//             color: #000;
+//             margin-bottom: 2rem;
+//         }
+//         .between-part {
+//             display: inline-block;
+//             margin-right: 1rem;
+//             margin-left: 1rem;
+//             vertical-align: center;
+//         }
+//         .btn {
+//             display: inline-block;
+//         }
+//     }
+//     @include respond(medium) {
+//         .center{
+//             width: calc(100% - 2rem);
+//         }
+//         .flex-row{
+//             flex-direction: column;
+//         }
+//         .col4{
+//             width: 50%;
+//         }
+//         .col6{
+//             width: 100%;
+//         }
+//         .cagir-content {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             .cagir-btn-side{
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 padding-bottom: 0.25rem;
+//             }
+//             h1{
+//                 margin-bottom: 1rem;
+//             }
+//         }
+//     }
+//     @include respond(small) {
+//         .col4{
+//             width: 80%;
+//         }
+//         .cagir-content {
+//             .between-part {
+//                 margin-right: 0.25rem;
+//                 margin-left: 0.25rem;
+//             }
+//             .cagir-btn-side{
+//                 justify-content: space-between;
+//             }
+//         }
+//     }
+// }
+// .musteri {
+//     position: relative;
+//     width: 100%;
+//     margin-top: 10rem;
+//     margin-bottom: 10rem;
+//     padding-top: 3rem;
+//     padding-bottom: 3rem;
+//     background-color: #f7f7fb;
+//     .center {
+//         @include respond(medium) {
+//             width: 100%;
+//         }
+//         .section-topic {
+//             @include respond(medium) {
+//                 width: calc(100% - 2rem);
+//                 margin: 0 auto;
+//             }
+//         }
+//     }
+//     .bg-image-top {
+//         z-index: -1;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         transform: translateY(-60%);
+//         img {
+//             width: 100%;
+//         }
+//     }
+//     .bg-image-bottom {
+//         z-index: -1;
+//         position: absolute;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         transform: translateY(60%);
+//         img {
+//             width: 100%;
+//         }
+//     }
+//     .musteriwrap {
+//         margin-top: 4rem;
+//         margin-bottom: 4rem;
+//         background-color: #f7f7fb;
+//         display: grid;
+//         grid-template-columns: repeat(4, 1fr);
+//         grid-template-rows: repeat(3, 130px);
+//         grid-gap: 4rem;
+//         .musterines {
+//             cursor: pointer;
+//             filter: grayscale(9);
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             background-color: white;
+//             border-radius: 50px;
+//             transition: 333ms all ease-out;
+//             // box-shadow: 0px 0px 10px $shadowColor;
+//             // box-shadow: 0px 0px 10px 4px rgba(227,230,241,0.9);
+//             @include mixin-box-shadow;
+
+//             img {
+//                 // max-width: 90%;
+//                 width: auto;
+//                 max-width: 90%;
+//                 max-height: 90%;
+//                 height: auto;
+//             }
+//             &:hover {
+//                 filter: none;
+//             }
+//             @include respond(medium) {
+//                 height: 70px;
+//             }
+//         }
+//         &.musteriwrap-mobil {
+//             display: none;
+//             .musterines{
+//                 margin-top: 1rem;
+//                 margin-bottom: 1rem;
+//                 border-radius: 30px;
+//             }
+//             @include respond(medium) {
+//                 display: block;
+//             }
+//         }
+//         @include respond(medium) {
+//             display: none;
+//         }
+//     }
+// }

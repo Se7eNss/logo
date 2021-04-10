@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo || Talep Edin</title>
+
+    <!-- _____________________________ bootstrap 4.css _____________________________________________________________ -->
+    <link rel="stylesheet" type="text/css" href="dest/css/default/fontawesome/css/all.css">
+
+    <!-- _____________________________ reset.css _____________________________________________________________ -->
+    <link rel="stylesheet" type="text/css" href="dest/css/default/reset.css">
+
+    <!-- _____________________________ reset.css _____________________________________________________________ -->
+    <link rel="stylesheet" type="text/css" href="dest/css/default/animate.css">
+
+    <!-- _____________________________ owl.css _____________________________________________________________ -->
+    <link rel="stylesheet" type="text/css" href="dest/js/owl/assets/owl.carousel.css">
+
+    <!-- _____________________________ style.css _____________________________________________________________ -->
+    <link rel="stylesheet" type="text/css" href="dest/css/main.css">
+</head>
+
+<body>
+    <div id="navbar" class="navbar">
+        <div class="header-bg">
+            <div id="nav-buttons" class="nav-buttons-mobil">
+                <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="anasayfa.html">Anasayfa</a>
+                <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="hizmetler.html">Neler
+                    Yapıyoruz</a>
+                <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="referans.html">Neler Yaptık</a>
+                <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="isler.html">Markalarımız</a>
+                <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="iletisim.html">İletişim</a>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="flex-row align-center">
+                <div class="nav-brand">
+                    <a href="anasayfa.html">
+                        <img src="dest/images/png/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="nav-list">
+                    <div class="nav-buttons flex-row">
+                        <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="anasayfa.html">Anasayfa</a>
+                        <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="hizmetler.html">Neler
+                            Yapıyoruz</a>
+                        <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="referans.html">Neler Yaptık</a>
+                        <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="isler.html">Markalarımız</a>
+                        <a class="btn btn-has-hover-mor nav-btn pop-regular-20" href="iletisim.html">İletişim</a>
+                    </div>
+
+                    <div class="tekal">
+                        <a class="btn btn-p btn-has-bg bg-mor tek-btn pop-medium-20" href="#">
+                            Teklif Al
+                        </a>
+
+                        <a id="mobile-menu-button" class="mobile pop-medium-20" href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="talep m-top">
+        <div class="center">
+            <div class="justify-center">
+                <div class="section-topic">
+                    Teklifimiz İçin Taleplerinizi <span>Bildirin</span>
+                </div>
+            </div>
+
+            <div class="contact justify-center">
+                <form action="post" onkeyup="formIsFixed()">
+                    <div class="input-wrapper">
+                        <input class="pop-semibold-24 contact-item bar" type="text" name="ad" placeholder="İsim" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input class="pop-semibold-24 contact-item bar" type="text" name="firm" placeholder="Firma"
+                            required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input class="pop-semibold-24 contact-item bar" type="tel" name="tel" id="input-tel"
+                            placeholder="Telefon" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input class="pop-semibold-24 contact-item bar" type="email" name="eposta" placeholder="Eposta"
+                            required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <div class="sel pop-semibold-24 bar">
+                            <select required>
+                                <option value="" disabled>Seçiniz</option>
+                                <option value="">Seçim 1</option>
+                                <option value="">Seçim 2</option>
+                                <option value="">Seçim 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <div class="pop-semibold-24 contact-radio-buttons bar">
+                            <label>
+                                <input type="radio" name="radio1" required checked/>
+                                <span></span>
+                                Select
+                            </label>
+    
+                            <label>
+                                <input type="radio" name="radio1" />
+                                <span></span>
+                                Select
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <textarea class="pop-semibold-24 contact-item bar" name="mes" id="" cols="30" rows="5"
+                            placeholder="Ayrıntılar" required></textarea>
+                    </div>
+
+                    <div class="btn-wrapper justify-center">
+                        <input class="sendbtn btn btn-p btn-has-bg bg-mor pop-semibold-24" type="submit" value="Gönder"
+                            onclick="formControl()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="center">
+            <div class="footer-items pop-regular-20">
+                <img src="dest/images/png/logo-w.png" alt="">
+
+                <p>©2021 ©Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- _____________________________ jQuery _____________________________________________________________ -->
+<script type="text/javascript" src="dest/js/default/jquery-3.5.1.min.js"></script>
+
+<!-- _____________________________ jQuery-mask _____________________________________________________________ -->
+<script type="text/javascript" src="dest/js/default/jquery.mask.min.js"></script>
+
+<!-- _____________________________ owl.js _____________________________________________________________ -->
+<script type="text/javascript" src="dest/js/owl/owl.carousel.min.js"></script>
+
+<!-- _____________________________ SCROLL-REVEAL _____________________________________________________________ -->
+<script type="text/javascript" src="dest/js/default/scrollreveal.min.js"></script>
+
+<!-- _____________________________ talep-edin.js _____________________________________________________________ -->
+<script type="text/javascript" src="dest/js/talep.js"></script>
+<script type="text/javascript" src="dest/js/custom.js"></script>
+
+</html>

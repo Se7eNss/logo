@@ -1,0 +1,174 @@
+// @import "settings";
+
+// .cagir {
+//     position: relative;
+//     width: 100%;
+//     margin-top: 3rem;
+//     margin-bottom: 5rem;
+//     background-color: white;
+//     .col4 {
+//         img {
+//             margin-left: -30%;
+//             width: 140%;
+//         }
+//     }
+//     .cagir-content {
+//         font-family: $font;
+//         font-weight: 400;
+//         font-size: 18px;
+//         color: #000;        
+//         h1 {
+//             color: #000;
+//             margin-bottom: 2rem;
+//         }
+//         .between-part {
+//             display: inline-block;
+//             margin-right: 1rem;
+//             margin-left: 1rem;
+//             vertical-align: center;
+//         }
+//         .btn {
+//             display: inline-block;
+//         }
+//     }
+//     @include respond(medium) {
+//         .center{
+//             width: calc(100% - 2rem);
+//         }
+//         .flex-row{
+//             flex-direction: column;
+//         }
+//         .col4{
+//             width: 50%;
+//         }
+//         .col6{
+//             width: 100%;
+//         }
+//         .cagir-content {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             .cagir-btn-side{
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 padding-bottom: 0.25rem;
+//             }
+//             h1{
+//                 margin-bottom: 1rem;
+//             }
+//         }
+//     }
+//     @include respond(small) {
+//         .col4{
+//             width: 80%;
+//         }
+//         .cagir-content {
+//             .between-part {
+//                 margin-right: 0.25rem;
+//                 margin-left: 0.25rem;
+//             }
+//             .cagir-btn-side{
+//                 justify-content: space-between;
+//             }
+//         }
+//     }
+// }
+
+.musteri2 {
+    position: relative;
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: white;
+    @include respond(medium) {
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;
+    }
+    .center {
+        @include respond(medium) {
+            width: 100%;
+        }
+        .section-topic {
+            margin-bottom: 7rem;
+            @include respond(medium) {
+                width: calc(100% - 2rem);
+                margin: 0 auto;
+            }
+        }
+    }
+  
+    .musteriwrap {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 130px);
+        grid-gap: 4rem;
+        @include respond(medium) {
+            padding: 1rem;
+            grid-gap:1rem;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(12, 100px);
+        }
+        .musterines {
+            cursor: pointer;
+            filter: grayscale(9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 50px;
+            transition: 333ms all ease-out;
+            @include mixin-box-shadow;
+            img {
+                width: auto;
+                max-width: 90%;
+                max-height: 90%;
+                height: auto;
+            }
+
+            @include respond(medium) {
+                height: 70px;
+                border-radius: 30px;
+
+                img {
+                    width: auto;
+                    max-width: 90%;
+                    max-height: 90%;
+                    height: auto;   
+                }
+            }
+        }
+        :hover {
+            filter: none;
+        }
+    }
+    .musterilink {
+        font-family: $font;
+        font-weight: 700;
+        font-size: 24px;
+        @include respond(medium) {
+            padding-left: 10px;
+        }
+        @include respond(small) {
+            font-size: 14px;
+            padding-left: 10px;
+        }
+        a {
+            color: $topicBlack;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        i {
+            margin-left: 0.5rem;
+            color: #ff9e00;
+        }
+    }
+}

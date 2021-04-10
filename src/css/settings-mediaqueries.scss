@@ -1,0 +1,71 @@
+// Extra extra large devices (tv, 1440px and up)
+@media screen and (min-width: 1440px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media screen and (max-width: 1200px) {
+}
+// Large devices (desktops, 992px and up)
+@media screen and (max-width: 1100px) {
+    .navbar {
+        .center {
+            width: calc(100% - 2rem);
+        }
+        .nav-list {
+            .nav-buttons {
+                display: none;
+            }
+            .tekal {
+                float: right;
+                .tek-btn {
+                    display: none;
+                }
+                .mobile {
+                    display: block;
+                }
+            }
+        }
+    }
+    .iletisim {
+        .center {
+            width: calc(100% - 2rem);
+        }
+        .contact {
+            .flex-row {
+                flex-direction: column;
+                .bilnes.flex-row {
+                    flex-direction: row;
+                }
+            }
+            .sendme {
+                width: 100%;
+                .bar {
+                    width: calc(100% - 2rem);
+                }
+            }
+            .contact-bilgi {
+                width: 100%;
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    .navbar {
+        .center {
+            .flex-row {
+              height: 15vh;
+              max-height: 90px;
+              min-height: 64px;
+            }
+          }
+        .nav-brand {
+            width: 100px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 576px) {
+}

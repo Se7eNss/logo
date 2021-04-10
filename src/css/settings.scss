@@ -1,0 +1,723 @@
+//  _____________________________ poppins-italic _____________________________________________________________
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500;1,900&display=swap');
+
+//  _____________________________ poppins-regular _____________________________________________________________
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+//  _____________________________ poppins-medium _____________________________________________________________
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+//  _____________________________ poppins-semibold _____________________________________________________________
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+//  _____________________________ poppins-bold _____________________________________________________________
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+$mor: blueviolet;
+$navcolor: white;
+$topicBlack: #2b2b2b;
+$font: "Poppins", sans-serif;
+$btn-bg-linear-mor: linear-gradient(90deg, rgba(103, 31, 163, 1) 29%, rgba(148, 52, 180, 1) 77%);
+$btn-bg-linear-orange: linear-gradient(90deg, rgba(255, 141, 45, 1) 29%, rgba(252, 173, 13, 1) 77%);
+
+// e5e9f2
+$shadowColor: #e3e6f1;
+// box-shadow
+@mixin mixin-box-shadow {
+  box-shadow: 0px 0px 10px 4px rgba(227, 230, 241, 0.9);
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint== large) {
+    @media (max-width: 1500px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == medium) {
+    @media (max-width: 1100px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == small) {
+    @media (max-width: 520px) {
+      @content;
+    }
+  }
+}
+
+//  _____________________________ fontlar _____________________________________________________________
+
+// slider fontu
+.pop-bold-85 {
+  font-family: $font;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  @include respond(large) {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  @include respond(medium) {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  @include respond(small) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+// hizmet kart başlıkları, iletisim bars
+.pop-semibold-24 {
+  font-family: $font;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  @include respond(medium) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+// hizmet kart içerikleri
+.pop-reguar-18 {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  @include respond(medium) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+// işler fontu
+// query ile 1440 altına 16px yazılması lazım
+.pop-medium-20 {
+  font-family: $font;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  @include respond(medium) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+// çağır başlığı
+.pop-bold-60 {
+  font-family: $font;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 45px;
+  @include respond(medium) {
+    font-size: 20px;
+    line-height: 24px;
+    // font-size: 5vw;
+  }
+}
+
+// çağır between part
+.pop-regular-24 {
+  font-family: $font;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  @include respond(medium) {
+    font-size: 12px;
+    line-height: 16px;
+    // font-size: 5vw;
+  }
+}
+
+// bakış kartları
+.pop-semibold-26 {
+  font-family: $font;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 31px;
+  @include respond(medium) {
+    font-size: 16px;
+    line-height: 20px;
+    // font-size: 5vw;
+  }
+}
+
+// footer, navbar
+.pop-regular-20 {
+  font-family: $font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  @include respond(large) {
+    font-size: 18px;
+    line-height: 22px;
+    // font-size: 5vw;
+  }
+  @include respond(medium) {
+    font-size: 13px;
+    line-height: 17px;
+    // font-size: 5vw;
+  }
+}
+
+// footer
+.pop-regular-20-small-14 {
+  font-family: $font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  @include respond(large) {
+    font-size: 16px;
+    line-height: 20px;
+    // font-size: 5vw;
+  }
+  @include respond(medium) {
+    font-size: 13px;
+    line-height: 16px;
+    padding: 0.25rem;
+    // font-size: 5vw;
+  }
+}
+
+// iletisim tel
+.pop-regular-24-small-16 {
+  font-family: $font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  @include respond(large) {
+    font-size: 20px;
+    line-height: 23px;
+    // font-size: 5vw;
+  }
+  @include respond(medium) {
+    font-size: 16px;
+    line-height: 20px;
+    // font-size: 5vw;
+  }
+}
+
+// iletisim gmail
+.pop-regular-24-small-14 {
+  font-family: $font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  @include respond(large) {
+    font-size: 18px;
+    line-height: 22px;
+    // font-size: 5vw;
+  }
+  @include respond(medium) {
+    font-size: 14px;
+    line-height: 18px;
+    // font-size: 5vw;
+  }
+}
+
+// nav tekal
+.pop-medium-20 {
+  font-family: $font;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  @include respond(medium) {
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
+.section-topic {
+  color: $topicBlack;
+  font-family: $font;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 45px;
+  .topic-semi-bold {
+    font-weight: 600;
+  }
+  span {
+    font-weight: 700;
+  }
+  .p {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 30px;
+  }
+  @include respond(medium) {
+    font-size: 24px;
+    line-height: 28px;
+    .p {
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.dis-link-wrapper {
+  a.dis-link {
+    display: inline-block;
+    padding: 0.25rem 0;
+    color: $topicBlack;
+    font-family: $font;
+    font-weight: 700;
+    font-size: 24px;
+    i {
+      margin-left: 0.5rem;
+      color: #ff9e00;
+    }
+    @include respond(medium) {
+      font-size: 14px;
+    }
+  }
+  @include respond(medium) {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.center {
+  position: relative;
+  max-width: 1400px;
+  width: 80%;
+  margin: 0 auto;
+  // border: 1px solid black;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.justify-left {
+  justify-content: flex-start;
+}
+.col4 {
+  width: 40%;
+}
+.col6 {
+  width: 60%;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.btn {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 333ms all ease-out;
+  &.btn-p {
+    padding: 1rem 2rem;
+    @include respond(small) {
+      padding: 0.75rem 1.75rem;
+    }
+  }
+  &.btn-p-2 {
+    padding: 1rem 3rem;
+  }
+  &.btn-has-hover-mor {
+    border-radius: 30px;
+    color: #000;
+  }
+  &.btn-has-border {
+    border: 1px solid orange;
+    border-radius: 30px;
+    color: $topicBlack;
+    &:hover {
+      background: $btn-bg-linear-orange;
+    }
+  }
+  &.pop-bold-24 {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 24px;
+    @include respond(medium) {
+      font-size: 14px;
+      // line-height: 17px;
+      // font-size: 5vw;
+    }
+  }
+  &.pop-medium-24 {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 24px;
+    @include respond(medium) {
+      font-size: 14px;
+      // line-height: 17px;
+      // font-size: 5vw;
+    }
+  }
+  &.pop-semibold-22 {
+    font-family: $font;
+    font-weight: 600;
+    font-size: 22px;
+    // line-height: 27px;
+    @include respond(medium) {
+      font-size: 12px;
+      // line-height: 17px;
+      // font-size: 5vw;
+    }
+  }
+  &.pop-semibold-24 {
+    font-family: $font;
+    font-weight: 600;
+    font-size: 24px;
+    // line-height: 27px;
+    @include respond(medium) {
+      font-size: 14px;
+      // line-height: 17px;
+      // font-size: 5vw;
+    }
+  }
+}
+
+.btn-has-bg {
+  color: #fff;
+  border-radius: 20px;
+  &.bg-mor {
+    background: $btn-bg-linear-mor;
+    border-radius: 30px;
+    &:hover {
+      // opacity: 0.8;
+      background: $btn-bg-linear-orange;
+    }
+  }
+  &.bg-orange {
+    border-radius: 30px;
+    background: $btn-bg-linear-orange;
+    &:hover {
+      background: $btn-bg-linear-mor;
+    }
+  }
+}
+
+a {
+  &.btn-has-bg {
+    color: #fff;
+  }
+  &.btn-has-hover-mor {
+    padding: 1rem 0.75rem;
+    &:hover {
+      background: $btn-bg-linear-mor;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.marg {
+  margin-top: 90px;
+}
+
+.bg {
+  background-color: purple;
+}
+
+// _____________________________ navbar _____________________________________________________________
+.navbar {
+  z-index: 25;
+  position: fixed;
+  width: 100%;
+  height: 15vh;
+  max-height: 90px;
+  min-height: 64px;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 333ms all ease-out;
+  display: flex;
+  align-items: center;
+  .header-bg {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    background-color: #fff;
+    transition: 444ms height ease-out;
+    overflow: hidden;
+    .nav-buttons-mobil {
+      width: calc(100% - 2rem);
+      margin: 0 auto;
+      margin-top: 7rem;
+      margin-bottom: 2rem;
+      .pop-regular-20 {
+        font-size: 26px;
+        line-height: 30px;
+      }
+    }
+  }
+  .nav-list {
+    display: flex;
+    .nav-buttons {
+      display: flex;
+      .nav-btn {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+    .tekal {
+      margin-left: 0.25rem;
+      display: flex;
+      align-items: center;
+      .mobile {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        display: none;
+        z-index: 10;
+        color: $mor;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 30px;
+        &:before {
+          font-family: $font;
+          content: "TR";
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 10px;
+          vertical-align: middle;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+  @include respond(medium) {
+    .nav-bar {
+      width: 150px;
+      img {
+        width: 100%;
+      }
+    }
+    .nav-list {
+      text-align: center;
+      .nav-buttons {
+        // width: calc(100% + 2rem);
+        // margin-left: -1rem;
+        .nav-btn {
+          margin: 0;
+        }
+      }
+      .pop-regular-20 {
+        font-size: 20px;
+        // border-radius: 0;
+      }
+    }
+  }
+}
+
+// _____________________________ iletisim _____________________________________________________________
+.iletisim {
+  width: 100%;
+  // position: relative;
+  margin-top: 3rem;
+  .contact {
+    margin-bottom: 3rem;
+    .sendme {
+      width: 40%;
+      margin-top: 3rem;
+      .input-wrapper {
+        border: 1px solid transparent;
+        .bar {
+          width: 90%;
+          border-radius: 5px;
+          padding: 1rem;
+          margin-top: 1rem;
+          border: none;
+          background-color: #f7f7fb;
+          transition: 333ms all ease-out;
+          &:focus {
+            outline: none;
+          }
+          &.invalid {
+            border-color: #de4b40;
+            background-color: #ffd1d1;
+          }
+        }
+        textarea {
+          height: 80px;
+          resize: none;
+          padding-top: 1rem;
+        }
+      }
+      .btn-wrapper {
+        display: flex;
+        width: calc(100% - 2rem);
+        margin: 0 auto;
+        margin-top: 2rem;
+        .sendbtn {
+          padding: 1rem 3rem;
+          border-radius: 30px;
+          color: white;
+          border: none;
+          margin-left: auto;
+          background-color: #ff9600;
+          @include respond(medium) {
+            padding: 1rem 4rem;
+          }
+        }
+      }
+    }
+    .contact-bilgi {
+      width: 50%;
+      margin-top: 3rem;
+      padding-top: 3rem;
+      a {
+        color: #000;
+      }
+      .bilnes {
+        // box-shadow: 0px 0px 10px $shadowColor;
+        @include mixin-box-shadow;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 60px;
+        border-radius: 7px;
+        img {
+          margin-top: -1.5rem;
+          margin-right: 0.5rem;
+          max-height: 50px;
+          max-width: 50px;
+        }
+        &.baglantilar {
+          a {
+            display: flex;
+            align-items: center;
+            perspective: 50px;
+            img {
+              margin-top: 0;
+              max-width: 40px;
+              max-height: 40px;
+              transition: 666ms;
+            }
+            &:last-child {
+              img {
+                margin-right: 0;
+              }
+            }
+            &:hover {
+              &:nth-of-type(2n) {
+                img {
+                  transform: rotateX(-360deg);
+                }
+              }
+              &:nth-of-type(2n + 1) {
+                img {
+                  transform: rotateY(-360deg);
+                }
+              }
+            }
+          }
+        }
+      }
+      .tel {
+        margin-left: 1rem;
+      }
+      .posta {
+        margin-top: 1.5rem;
+        margin-right: 0.25rem;
+      }
+      .adres {
+        width: 80%;
+        margin-left: 4rem;
+      }
+      .map {
+        margin-top: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+    @include respond(medium) {
+      .sendme {
+        .btn-wrapper {
+          .sendbtn {
+            margin: auto;
+          }
+        }
+      }
+      .contact-bilgi {
+        display: flex;
+        width: 100%;
+        margin-top: 1rem;
+        justify-content: center;
+        flex-direction: column;
+        .bilnes {
+          justify-content: center;
+          margin-top: 1rem;
+        }
+        .tel {
+          width: 50%;
+          margin: 1.5rem auto 0 auto;
+          flex-direction: row;
+        }
+        .posta {
+          margin: 1.5rem auto 0 auto;
+          width: 60%;
+          flex-direction: row;
+        }
+        .adres {
+          margin: 1.5rem auto 0 auto;
+          width: 80%;
+          height: 20%;
+          flex-direction: row;
+        }
+        .baglantilar {
+          margin: 1.5rem auto 0 auto;
+          width: 84%;
+          flex-direction: row;
+        }
+        .map {
+          margin: 1.5rem auto 0 auto;
+          width: 40%;
+          order: -1;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
+
+// _____________________________ footer _____________________________________________________________
+.footer {
+  display: flex;
+  align-items: center;
+  height: 180px;
+  width: 100%;
+  margin-top: 3rem;
+  background: $btn-bg-linear-mor;
+  .footer-items {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    color: #fff;
+    margin-left: 2rem;
+  }
+}
+
+// @import "settings-mediaqueries";

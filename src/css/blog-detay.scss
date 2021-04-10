@@ -1,0 +1,233 @@
+// @import "settings";
+
+.wrap {
+    position: relative;
+    width: 100%;
+    margin-top: 110px;
+    padding-top: 3rem;
+    .yuvarlak {
+        // display: none;
+        overflow: hidden;
+        z-index: -1;
+        position: absolute;
+        height: 800px;
+        width: 800px;
+        right: -30%;
+        top: -5%;
+        border-radius: 750px;
+        background-color: #f7f7fb;
+    }
+    .imgwrap {
+        position: relative;
+        padding: 2rem;
+        margin-top: 3rem;
+        border-radius: 30px;
+        background: #fff;
+        // box-shadow: 0px 0px 10px $shadowColor;
+        @include mixin-box-shadow;
+        @include respond(medium) {
+            padding: 1rem;
+        }
+        h1 {
+            font-family: $font;
+            font-weight: 600;
+            font-display: swap;
+            font-size: 35px;
+            margin-bottom: 2rem;
+            @include respond(medium) {
+                font-size: 20px;
+            }
+        }
+        p {
+            font-display: swap;
+            font-family: $font;
+            font-size: 20px;
+            font-weight: 500px;
+            color: black;
+            margin-bottom: 2rem;
+            @include respond(medium) {
+                font-size: 14px;
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .p {
+        font-family: $font;
+        font-size: 18px;
+        font-weight: 400;
+        color: $topicBlack;
+        padding: 2.5rem;
+        line-height: 25px;
+        @include respond(medium) {
+            font-size: 14px;
+            padding: 0.5rem;
+        }
+    }
+    .paylas {
+        position: relative;
+        height: 50px;
+        padding: 2.5rem;
+        @include respond(medium) {
+            padding: 2rem 0.5rem;
+        }
+        li {
+            font-family: $font;
+            font-weight: 700;
+            font-size: 18px;
+            color: black;
+            a {
+                display: inline-block;
+                margin-top: 0.5rem;
+            }
+            img {
+                @include respond(medium) {
+                    height: 35px;
+                }
+            }
+        }
+    }
+}
+
+// .bakis {
+//     position: relative;
+//     width: 100%;
+//     margin-top: 3rem;
+//     margin-bottom: 3rem;
+//     padding-top: 3rem;
+//     overflow: hidden;
+//     .section-topic {
+//         @include respond(medium) {
+//             width: calc(100% - 2rem);
+//             margin: 0 auto;
+//         }
+//     }
+//     .center {
+//         @include respond(medium) {
+//             width: 100%;
+//         }
+//     }
+//     .bakislink {
+//         display: flex;
+//         align-items: flex-end;
+//         .btn {
+//         }
+//         @include respond(medium) {
+//             display: none;
+//         }
+//     }
+//     .bakislink1 {
+//         display: none;
+//         @include respond(medium) {
+//             display: flex;
+//             justify-content: center;
+//         }
+//         .btn {
+//             @include respond(medium) {
+//             }
+//         }
+//     }
+//     .btn-wrapper-left {
+//         position: relative;
+//         .btn {
+//             position: absolute;
+//             left: -60px;
+//             width: 50px;
+//             height: 50px;
+//             font-weight: 500;
+//             font-size: 25px;
+//             border-radius: 50px;
+//             box-shadow: 0px 0px 10px $shadowColor;
+//         }
+//         @include respond(medium) {
+//             display: none;
+//         }
+//     }
+//     .btn-wrapper-right {
+//         position: relative;
+//         .btn {
+//             position: absolute;
+//             width: 50px;
+//             height: 50px;
+//             right: -60px;
+//             font-weight: 500;
+//             font-size: 25px;
+//             border-radius: 50px;
+//             box-shadow: 0px 0px 10px $shadowColor;
+//         }
+//         @include respond(medium) {
+//             display: none;
+//         }
+//     }
+//     .bakis-carousel {
+//         margin-top: 3rem;
+//         @include respond(medium) {
+//             display: none;
+//         }
+//         &.bakis-carousel-mobil {
+//             display: none;
+//             @include respond(medium) {
+//                 display: block;
+//             }
+//         }
+//         .card {
+//             display: flex;
+//             flex-direction: column;
+//             margin-top: 1rem;
+//             margin-bottom: 1rem;
+//             // min-height: 450px;
+//             // padding-bottom: 3rem;
+//             overflow: hidden;
+//             text-align: left;
+//             background-color: #fff;
+//             border-radius: 10px;
+//             box-shadow: 0px 0px 10px $shadowColor;
+//             p {
+//                 padding: 0.5rem 1rem;
+//                 margin-top: 1rem;
+//                 font-family: $font;
+//                 font-weight: 600;
+//             }
+//             .bakisbtn {
+//                 margin: 1rem;
+//                 margin-top: auto;
+//                 a {
+//                     margin-left: auto;
+//                     width: 40px;
+//                     height: 40px;
+//                     display: flex;
+//                     align-items: center;
+//                     justify-content: center;
+//                     overflow: hidden;
+//                     border-radius: 50px;
+//                     border: 1px solid #ff9e00;
+//                     @include respond(small) {
+//                         width: 30px;
+//                         height: 30px;
+//                     }
+//                 }
+//                 i {
+//                     font-size: 30px;
+//                     color: #ff9e00;
+//                     @include respond(small) {
+//                         font-size: 20px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     .yuvarlak {
+//         z-index: -1;
+//         position: absolute;
+//         height: 600px;
+//         width: 600px;
+//         right: -20%;
+//         top: -5%;
+//         border-radius: 750px;
+//         background-color: #f7f7fb;
+//     }
+// }
+
+
+// @import "blog-detay-mediaqueries.scss";

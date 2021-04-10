@@ -1,0 +1,18 @@
+{
+  "name": "grunt-getting-started",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-sass": "^3.0.2",
+    "jshint-stylish": "latest",
+    "node-sass": "^4.12.0"
+  }
+}

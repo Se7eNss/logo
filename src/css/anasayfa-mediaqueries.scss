@@ -1,0 +1,242 @@
+// Extra extra large devices (tv, 1440px and up)
+@media screen and (min-width: 1520px) {
+    .anasayfa-slider {
+        .ortala {
+            .btn-wrapper {
+                top: -2vh;
+            }
+        }
+    }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media screen and (max-width: 1200px) {
+}
+// Large devices (desktops, 992px and up)
+@media screen and (max-width: 1100px) {
+    .anasayfa-slider {
+        .center {
+            width: calc(100% - 2rem);
+            .right-flow {
+                width: 100%;
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media screen and (max-width: 900px) {
+    .anasayfa-slider {
+        .center {
+            width: 60%;
+            overflow: hidden;
+            // border: 1px solid lime;
+            .flex-row {
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .right-flow {
+                // width: 100%;
+                padding-top: 15vh;
+                // height: 85vh;
+                // max-height: 900px;
+            }
+        }
+        .a-slider-writing {
+            justify-content: flex-start;
+            width: 100%;
+            height: auto;
+            min-height: auto;
+            .a-slider-writing-overflow {
+                width: 100%;
+            }
+        }
+        .slider-image-side {
+            width: 100%;
+            height: 60vh;
+            min-height: auto;
+            .slider-wrapper {
+                .a-slider-carousel-img {
+                    .item {
+                        height: 60vh;
+                        .a-slider-image {
+                            &.img-center {
+                                img {
+                                    width: 150px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .a-s-buttons {
+                display: none;
+            }
+        }
+        .ortala {
+            overflow: hidden;
+            .alt {
+                width: 100%;
+                position: relative;
+                img {
+                    width: 100%;
+                }
+            }
+            .btn-wrapper {
+                top: initial;
+                bottom: 0;
+                left: calc(50%);
+                transform: translateX(-50%);
+                .owl-dots {
+                    display: flex;
+                }
+                .btn-has-bg {
+                    background: $btn-bg-linear-orange;
+                }
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (max-width: 768px) {
+    .anasayfa-slider {
+        .center {
+            width: 70%;
+        }
+        .slider-image-side {
+            // height: 70vh;
+            .slider-wrapper {
+                //     max-height: inherit;
+
+                // min-height: inherit;
+                .a-slider-carousel-img {
+                    .item {
+                        // height: 70vh;
+                        .a-slider-image {
+                            &.contain {
+                                img {
+                                    // height: 100%;
+                                    // min-height: 150%;
+                                    // min-height: auto;
+                                    
+                                    // // width: auto;
+                                    // min-width: 110%;
+                                    // height: auto;
+                                }
+                            }
+                            &.has-video {
+                                .slider-video {
+                                    min-height: 120%;
+                                    width: auto;
+                                    &.custom-video {
+                                        // min-height: auto;
+                                        // min-width: 120%;
+                                    }
+                                }
+                                iframe {
+                                    min-height: 130%;
+                                    min-width: 130%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media screen and (max-width: 520px) {
+    .anasayfa-slider {
+        .center {
+            width: 100%;
+            .right-flow {
+                width: calc(100% - 2rem);
+                // height: 85vh;
+                margin: 0 auto;
+            }
+        }
+        .slider-image-side {
+            height: 70vh;
+            .slider-wrapper {
+                //     max-height: inherit;
+
+                // min-height: inherit;
+                .a-slider-carousel-img {
+                    .item {
+                        height: 70vh;
+                        .a-slider-image {
+                            &.contain {
+                                img {
+                                    height: 100%;
+                                    min-height: 120%;
+                                    width: auto;
+                                }
+                            }
+                            &.has-video {
+                                iframe {
+                                    min-height: 130%;
+                                    min-width: 130%;
+                                }
+                                .slider-video {
+                                    border: 2px solid red;
+                                    &.custom-video{
+                                        // min-height: 140%;
+                                        min-width: 140%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ortala {
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
+            justify-content: center;
+            .alt {
+                width: 90%;
+                img {
+                    width: 130%;
+                    margin-left: -15%;
+                    margin-bottom: -5%;
+                }
+            }
+            .btn-wrapper {
+                top: initial;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 450px) {
+    .anasayfa-slider {
+        .slider-image-side {
+            padding-top: 5vh;
+            height: 55vh;
+            min-height: 200px;
+            .slider-wrapper {
+                // margin-top: 10vh;
+                // background-color: red;
+                // border: 1px solid red;
+                // min-height: 200px;
+                .a-slider-carousel-img {
+                    .item {
+                        height: 55vh;
+                        min-height: 200px;
+                    }
+                }
+            }
+        }
+        .ortala {
+            .btn-wrapper {
+                width: 70%;
+                .owl-dots {
+                    bottom: 5px;
+                }
+            }
+        }
+    }
+}

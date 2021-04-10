@@ -1,0 +1,219 @@
+.talep {
+    .contact {
+        form {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+            .input-wrapper {
+                border: 1px solid transparent;
+                .bar {
+                    width: calc(100% - 2rem);
+                    transition: 333ms all ease-out;
+                    &:focus {
+                        outline: none;
+                      }
+                    &.invalid {
+                        border-color: #de4b40;
+                        background-color: #ffd1d1;
+                    }
+                }
+                textarea{
+                    width: calc(100% - 2rem);
+                }
+            }
+            .contact-item {
+                padding: 1rem;
+                margin-bottom: 1rem;
+                border-radius: 5px;
+                background-color: #f4f4f4;
+                border: 1px solid #eee;
+                outline: none;
+                &.textbox {
+                    resize: none;
+                }
+            }
+            .contact-radio-buttons {
+                color: #757575;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                padding: 1rem;
+                border-radius: 5px;
+                border: 1px solid transparent;
+                label {
+                    cursor: pointer;
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 5rem;
+                    &:first-of-type {
+                    }
+                    input {
+                        position: absolute;
+                        visibility: hidden;
+                    }
+                    span {
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        vertical-align: bottom;
+                        background: url("../../dest/images/png/cb-empty.png") bottom no-repeat;
+                        background-size: 30px;
+                    }
+                    &.checked {
+                        span {
+                            // vertical-align: middle;
+                            vertical-align: bottom;
+                            background: url("../../dest/images/png/cb-ok.png") bottom no-repeat;
+                            background-size: 34px;
+                        }
+                    }
+                }
+            }
+            // <!-- _____________________________ Select Box _____________________________________________________________ -->
+            .sel {
+                cursor: pointer;
+                position: relative;
+                z-index: 5;
+                // padding: 1rem;
+                margin-bottom: 1rem;
+                border-radius: 5px;
+                background-color: #f4f4f4;
+                border: 1px solid #eee;
+                outline: none;
+                color: #757575;
+                width: 100% !important;
+                &.invalid {
+                    border-color: #de4b40;
+                    background-color: #ffd1d1;
+                }
+                &::after {
+                    content: "\f107";
+                    position: absolute;
+                    right: 1rem;
+                    font-size: 30px;
+                    top: calc(50% - 12px);
+                    font-family: "Font Awesome 5 Free";
+                    transition: 333ms all ease-out;
+                }
+                .sel-box {
+                    visibility: hidden;
+                    position: relative;
+                    z-index: -1;
+                    height: 0;
+                    width: 100% !important;
+
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin-top: 80px;
+
+                    border-top: none;
+                    background-color: #ddd;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    transition: 333ms all ease-out;
+                    &.active {
+                        visibility: visible;
+                        height: 186px;
+                    }
+                    .sel__box__options {
+                        display: block;
+                        padding: 1rem;
+                        &::after {
+                            content: "\f00c";
+                            position: absolute;
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 25px;
+                            right: 1rem;
+                            display: none;
+                        }
+                        &:hover {
+                            background-color: #ebedef;
+                        }
+                        $n: 10;
+                        &:nth-child(1) {
+                            animation-delay: 300ms;
+                        }
+                        @for $i from 2 through $n {
+                            &:nth-child(#{$i}) {
+                                animation-delay: #{$i * 100 + 200}ms;
+                            }
+                        }
+                    }
+                    .selected {
+                        &::after {
+                            display: inline;
+                            float: right;
+                        }
+                    }
+                }
+                .sel-placeholder {
+                    display: block;
+                    padding: 1rem;
+                    &::before {
+                        content: attr(data-placeholder);
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        padding: 1rem;
+                        visibility: hidden;
+                        overflow: hidden;
+                        white-space: nowrap; /* alt satıra hiç inme */
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+
+            .sel.active {
+                // border: none;
+                &::after {
+                    -webkit-transform: rotateX(-180deg);
+                    transform: rotateX(-180deg);
+                }
+                .sel-box {
+                    visibility: visible;
+                }
+                .sel-placeholder {
+                    visibility: hidden;
+                    &::before {
+                        visibility: visible;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Extra extra large devices (tv, 1440px and up)
+@media screen and (min-width: 1440px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media screen and (max-width: 1200px) {
+}
+// Large devices (desktops, 992px and up)
+@media screen and (max-width: 992px) {
+}
+// Medium devices (tablets, 768px and up)
+@media screen and (max-width: 768px) {
+    .talep {
+        .contact {
+            form {
+                width: 100%;
+                .contact-radio-buttons {
+                    label {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 576px) {
+}

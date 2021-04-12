@@ -127,6 +127,7 @@ $(document).ready(function () {
         loop: false,
         nav: false,
         margin: 0,
+        lazyload:true,
         videoWidth: false,
         videoHeight: false,
         autoplay: true,
